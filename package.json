@@ -1,0 +1,13 @@
+{
+  "name": "repro-cross-env",
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "FOO=bar toolpad-studio dev",
+    "build": "toolpad-studio build",
+    "start": "toolpad-studio start"
+  },
+  "dependencies": {
+    "@toolpad/studio": "latest",
+    "cross-env": "^7.0.3"
+  }
+}

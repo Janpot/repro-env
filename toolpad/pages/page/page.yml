@@ -1,0 +1,24 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/mui/mui-toolpad/v0.1.54/docs/schemas/v1/definitions.json#properties/Page
+
+apiVersion: v1
+kind: page
+spec:
+  title: Default page
+  alias:
+    - ZMKjmyg
+  queries:
+    - name: query
+      mode: query
+      query:
+        kind: rest
+        url: https://raw.githubusercontent.com/mui/mui-toolpad/master/public/movies.json
+        searchParams:
+          - name: hello
+            value:
+              $$jsExpression: parameters.foo
+        headers: []
+        method: GET
+      parameters:
+        - name: foo
+          value:
+            $$env: FOO
